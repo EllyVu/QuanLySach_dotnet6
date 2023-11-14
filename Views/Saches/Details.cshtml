@@ -1,0 +1,42 @@
+﻿@model QuanLySach.Models.Sach
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sach</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maxb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maxb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maloai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maloai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tensach)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tensach)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tacgia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tacgia)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Masach">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = QuanLySach
+build_property.RootNamespace = QuanLySach
+build_property.ProjectDir = C:\Users\hieuv\source\repos\QuanLySach\QuanLySach\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\hieuv\source\repos\QuanLySach\QuanLySach
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/LoaiSaches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhY2hlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/LoaiSaches/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhY2hlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/LoaiSaches/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhY2hlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/LoaiSaches/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhY2hlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/LoaiSaches/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhY2hlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/NhaXuatBans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhWHVhdEJhbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/NhaXuatBans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhWHVhdEJhbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/NhaXuatBans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhWHVhdEJhbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/NhaXuatBans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhWHVhdEJhbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/NhaXuatBans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhWHVhdEJhbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Saches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjaGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Saches/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjaGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Saches/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjaGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Saches/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjaGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Saches/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FjaGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hieuv/source/repos/QuanLySach/QuanLySach/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-c1v4my9d4z
