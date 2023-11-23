@@ -13,12 +13,16 @@
 
             <div class="form-group">
                 <label asp-for="Maxb" class="control-label">Nhà Xuất Bản</label>
-                <select asp-for="Maxb" asp-items="ViewBag.Maxb" class="form-control"></select>
+                <select asp-for="Maxb" asp-items="ViewBag.Maxb" class="form-select">
+                    <option selected value="">--- Chọn Nhà Xuất Bản ---</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label asp-for="Maloai" class="control-label">Loại Sách</label>
-                <select asp-for="Maloai" asp-items="ViewBag.Maloai" class="form-control"></select>
+                <select asp-for="Maloai" asp-items="ViewBag.Maloai" class="form-select">
+                    <option selected value="">---Chọn Loại Sách---</option>
+                </select>
             </div>
 
             <div class="form-group">

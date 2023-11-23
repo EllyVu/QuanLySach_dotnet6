@@ -4,73 +4,48 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using QuanLySach.Models;
+using QuanLySach.Services;
 
 namespace QuanLySach.Controllers
 {
     public class SachesController : Controller
     {
-        private readonly QlsContext _context;   
+        private readonly IQuanLySach _sach;
+        private readonly QlsContext _context;
 
-        public SachesController(QlsContext context)
+        public SachesController(QlsContext context, IQuanLySach quanLySach)
         {
+            _sach = quanLySach;
             _context = context;
         }
 
-        public async Task<IActionResult> Index(string searchString, string maSach, int tenLoai, string TenLoai)
+        //Get : Sach/Index
+        public async Task<IActionResult> Index(string searchString, string maSach)
         {
-            IQueryable<string> tenloaiQuery = from t in _context.LoaiSaches
-                                            orderby t.TenLoai
-                                            select t.TenLoai;
 
-            var saches = from s in _context.Saches
-                         .Include(m => m.NhaXuatBan)
-                         .Include(m => m.LoaiSach)
-                         select s;
-
+            var books = await _sach.GetAllSachAsync(searchString, maSach);
             if (!string.IsNullOrEmpty(searchString))
             {
-                saches = saches.Where(s => s.Tensach.Contains(searchString));
+                books = books.Where(s => s.Tensach.Contains(searchString)).ToList();
             }
-
-            if (!string.IsNullOrEmpty(maSach))
+            int parsedMaSach;
+            if (int.TryParse(maSach, out parsedMaSach))
             {
-                int maSachInt;
-                if (int.TryParse(maSach, out maSachInt))
-                {
-                    saches = saches.Where(s => s.Masach == maSachInt);
-                }
-
+                books = books.Where(s => s.Masach == parsedMaSach).ToList();
             }
-
-            if (!string.IsNullOrEmpty(TenLoai))
-            {
-                saches = saches.Where(s => s.LoaiSach.TenLoai == TenLoai);
-            }
-
-            return View(await saches.ToListAsync());
+            return View(books);
         }
-
-
 
         // GET: Saches/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Saches == null)
-            {
-                return NotFound();
-            }
 
-            var sach = await _context.Saches
-                .FirstOrDefaultAsync(m => m.Masach == id);
-            if (sach == null)
-            {
-                return NotFound();
-            }
-
-            return View(sach);
+            var sachDetails = await _sach.GetSachByIdAsync(id);
+            return View(sachDetails);
         }
 
         // GET: Saches/Create
@@ -82,8 +57,6 @@ namespace QuanLySach.Controllers
         }
 
         // POST: Saches/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Masach,Maxb,Maloai,Tensach,Tacgia")] Sach sach)
@@ -91,7 +64,7 @@ namespace QuanLySach.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(sach);
-                await _context.SaveChangesAsync();
+                await _sach.CreateSachAsync(sach);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["Maxb"] = new SelectList(_context.LoaiSaches, "MaXb", "Tenxb", sach.Maxb);
@@ -99,9 +72,9 @@ namespace QuanLySach.Controllers
             return View(sach);
         }
 
-
         // GET: Saches/Edit/5
         public async Task<IActionResult> Edit(int? id)
+
         {
             if (id == null || _context.Saches == null)
             {
@@ -113,6 +86,8 @@ namespace QuanLySach.Controllers
             {
                 return NotFound();
             }
+            ViewData["Maxb"] = new SelectList(_context.NhaXuatBans, "MaXb", "Tenxb");
+            ViewData["Maloai"] = new SelectList(_context.LoaiSaches, "MaLoai", "TenLoai");
             return View(sach);
         }
 
@@ -134,6 +109,7 @@ namespace QuanLySach.Controllers
                 {
                     _context.Update(sach);
                     await _context.SaveChangesAsync();
+                    await _sach.UpdateSachAsync(sach);  
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -148,19 +124,21 @@ namespace QuanLySach.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Maxb"] = new SelectList(_context.NhaXuatBans, "MaXb", "Tenxb", sach.Maxb);
+            ViewData["Maloai"] = new SelectList(_context.LoaiSaches, "MaLoai", "TenLoai", sach.Maloai);
             return View(sach);
         }
 
         // GET: Saches/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Saches == null)
+            if (id == null || _context == null || _context.Saches == null)
             {
                 return NotFound();
             }
 
-            var sach = await _context.Saches
-                .FirstOrDefaultAsync(m => m.Masach == id);
+            var sach = await _sach.GetSachByIdAsync(Convert.ToInt32(id));
+      
             if (sach == null)
             {
                 return NotFound();
@@ -178,10 +156,12 @@ namespace QuanLySach.Controllers
             {
                 return Problem("Entity set 'QlsContext.Saches'  is null.");
             }
+
             var sach = await _context.Saches.FindAsync(id);
             if (sach != null)
             {
                 _context.Saches.Remove(sach);
+                await _sach.DeleteSachAsync(id);
             }
 
             await _context.SaveChangesAsync();

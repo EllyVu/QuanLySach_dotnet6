@@ -1,18 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using QuanLySach.Models;
-
-
+using QuanLySach.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IQuanLySach, QuanLySachService>();
 builder.Services.AddDbContext<QlsContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("dbcontext")));
-
-
-
 
 var app = builder.Build();
 

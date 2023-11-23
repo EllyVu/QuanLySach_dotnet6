@@ -4,39 +4,34 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h3>Chi tiết sách</h3>
 
 <div>
-    <h4>Sach</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Maxb)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Maxb)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Maloai)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Maloai)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tensach)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tensach)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tacgia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tacgia)
-        </dd>
+        <dt class="col-sm-3">Mã sách:</dt>
+        <dd class="col-sm-9">@Model.Masach</dd>
+
+        <dt class="col-sm-3">Mã xuất bản:</dt>
+        <dd class="col-sm-9">@Model.Maxb</dd>
+
+        <dt class="col-sm-3">Mã loại:</dt>
+        <dd class="col-sm-9">@Model.Maloai</dd>
+
+        <dt class="col-sm-3">Tên sách:</dt>
+        <dd class="col-sm-9">@Model.Tensach</dd>
+
+        <dt class="col-sm-3">Tên tác giả:</dt>
+        <dd class="col-sm-9">@Model.Tacgia</dd>
+
+        <dt class="col-sm-3">Loại sách:</dt>
+        <dd class="col-sm-9">@Model.LoaiSach.TenLoai</dd>
+
+        <dt class="col-sm-3">Nhà xuất bản:</dt>
+        <dd class="col-sm-9">@Model.NhaXuatBan.Tenxb</dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Masach">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="form-group">
+    <a asp-action="Edit" asp-route-id="@Model?.Masach" class="btn btn-primary">Sửa</a> 
+    <a asp-action="Index" class="btn btn-outline-success">Quay lại danh sách</a>
 </div>

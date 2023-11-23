@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7wEnFRCCvR7poIIoKmkyoyrqBhLZzqst7nLSWi2BjbRsNSLw3WeoU6B5gHmRtM3vBqD2qQ6mfBdykCxts0XDCQ==",
+  "dgSpecHash": "H7NANSXqdUpcBECykd1tzdcLarWfMmTb6WVYe4Zj7Ka85Wy38GFApbrrb7j2h0SZvJvWkW3HN2edU8/RC7NX2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\hieuv\\source\\repos\\QuanLySach\\QuanLySach\\QuanLySach.csproj",
   "expectedPackageFiles": [
@@ -89,8 +89,8 @@
     "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
     "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\hieuv\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
